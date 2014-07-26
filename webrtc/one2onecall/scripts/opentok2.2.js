@@ -1,7 +1,7 @@
 
-var apiKey = "44906562"; // Replace with your API key. See https://dashboard.tokbox.com/projects
-var sessionId = "2_MX40NDkwNjU2Mn5-TW9uIEp1bCAyMSAyMToyNDo0NSBQRFQgMjAxNH4wLjIwNTUwMTc0fn4"; // Replace with your own session ID. See https://dashboard.tokbox.com/projects
-var token = "T1==cGFydG5lcl9pZD00NDkwNjU2MiZzaWc9ZTZlMTBmMjQwOGNjNWU0ZWI0NDI2ZWM1NDRlNzEyMjc0MzVkNWYxMDpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5Ea3dOalUyTW41LVRXOXVJRXAxYkNBeU1TQXlNVG95TkRvME5TQlFSRlFnTWpBeE5INHdMakl3TlRVd01UYzBmbjQmY3JlYXRlX3RpbWU9MTQwNjAwMzEwOCZub25jZT0wLjM0MzAwNDE0NjgyODkxNDM0JmV4cGlyZV90aW1lPTE0MDg1OTQ5Njg=" ;  // Replace with a generated token. See https://dashboard.tokbox.com/projects
+var apiKey = ""; // Replace with your API key. See https://dashboard.tokbox.com/projects
+var sessionId = ""; // Replace with your own session ID. See https://dashboard.tokbox.com/projects
+var token = "" ;  // Replace with a generated token. See https://dashboard.tokbox.com/projects
 		
 var session;
 var publisher;
