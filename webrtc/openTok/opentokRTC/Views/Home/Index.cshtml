@@ -1,0 +1,192 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>OpenTok API Sample &#8212;One to One Call Tutorial</title>
+   <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="http://static.opentok.com/webrtc/v2.2/js/opentok.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script src="scripts/opentok2.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/jquery.signalR-2.1.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+     
+        $(function () {
+            var rtc = $.connection.rTCHub;
+            var selfuser, caller;
+
+            show('connectLink');
+
+            function show(id) {
+                document.getElementById(id).style.display = 'block';
+            }
+
+            function hide(id) {
+                document.getElementById(id).style.display = 'none';
+            }
+
+            rtc.client.getOnlineUsers = function (users) {
+
+                $.each(users, function (key, user) {
+                    if (user.Name != $('#txtName').val()) {
+                        OnlineUsers.addButton(user);
+
+                    }
+                    else
+                        selfuser = user;
+                });
+            }
+            rtc.client.getNewOnlineUser = function (user) {
+
+                OnlineUsers.addButton(user);
+                               
+
+            };
+            rtc.client.disconnected = function (user) {
+                OnlineUsers.removeButton(user);
+                
+            }
+
+
+            rtc.client.notifybeginCall = function (touser, caller_user) {
+
+                acceptCallBox.show();
+                acceptCallBox.message('Incoming call from ' + caller_user.Name);
+                caller = caller_user;
+                ringing.play();
+
+                
+
+
+
+
+             }
+
+            rtc.client.notifyCallaccepted = function (selfuser, caller) {
+                ringing.mute();
+                btn = document.getElementById("btn_" + caller.ConnectionId);  
+                if (((selfuser.Opentok == null) && (caller.Opentok != null)) || (selfuser.Opentok != null && caller.Opentok != null && opentok.Connection.ConnectionId != selfuser.Opentok.ConnectionId)) {
+                    opentok.Connection = caller.Opentok;
+                    opentok.doConnect();
+
+                    
+                }
+                beginCall(btn);
+
+            }
+
+            rtc.client.notifyCallend = function (self, caller) {
+
+                if (acceptCallBox.IsVisible()) {
+
+                    acceptCallBox.hide();
+                    ringing.mute();
+
+                }
+                else {
+                    
+                    btn = document.getElementById("btn_" + caller.ConnectionId);  
+
+                    if (btn)
+                    {
+                          endCall(btn, "Call " + caller.Name);
+                           Opentok.disconnect();
+                           Opentok.connect(self.Opentok);
+
+                        
+                    }
+
+                    
+                }
+
+            }
+           
+            rtc.client.notifyCallrejected = function (message, calleruser) {
+                alert(message);
+                var btn = document.getElementById("btn_" + calleruser.ConnectionId);
+                if (btn.value == "End Call")
+                    endCall(btn, "Call " + calleruser.Name);
+                ringing.mute();
+            }
+
+            document.getElementById('callAcceptButton').onclick = function () {
+               
+                _btn = document.getElementById('btn_' + caller.ConnectionId);
+                 beginCall(_btn);
+                 Opentok.disconnect();
+                Opentok.connect(caller.Opentok);
+                ringing.mute();
+                acceptCallBox.hide();
+
+                 
+
+
+
+            }
+            document.getElementById('callRejectButton').onclick = function () {
+                acceptCallBox.hide();
+                ringing.mute();
+ 
+                rtc.server.callRejectedSignal(caller.ConnectionId);
+            }
+            $.connection.hub.start().done(function (){
+            
+                $('#connectLink').click(function () {
+                    var name = document.getElementById("txtName").value;
+                    rtc.server.getConnected(name, '@Request.ServerVariables["REMOTE_ADDR"].ToString()').done(function (user) {
+                        Opentok.connect(user.Opentok);
+
+                        show('disconnectLink');
+                        hide('connectLink');
+
+                    });
+                });
+                $('#disconnectLink').click(function () {
+                    rtc.server.getDisConnected().done(function () {
+                        Opentok.disconnect();
+                        OnlineUsers.removeAllButtons();
+                        show('connectLink');
+                        hide('disconnectLink');
+                    });
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+	
+    <div id="opentok_console" class="opentok_console">
+        <div id="links" class="links">
+            <div class="header">Control Panel</div>
+            <div id="controlpanel">
+                <input id="txtName" type="text" />
+                <input type="button" value="Connect" id="connectLink"  />
+                <input type="button" value="Leave" id="disconnectLink" style="display: none" />
+                <div class="header">Connected Users</div>
+                <div id="onlineusers">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="videos">
+            <div id="myCamera" class="publisherContainer"></div>
+            <div id="subscribers" class="subscribersContainer"></div>
+
+        </div>
+    </div>
+   
+        <div id="acceptCallBox">
+             
+            <div id="acceptCallLabel"></div>
+            <input type="button" id="callAcceptButton" value="Accept" /> <input type="button" id="callRejectButton" value="Reject" />
+        </div>
+
+      <audio id="rigning" style="display :none" loop >
+     <source  src="~/media/ringing .mp3" type="audio/mpeg">
+         </audio>
+	 
+</body>
+</html>

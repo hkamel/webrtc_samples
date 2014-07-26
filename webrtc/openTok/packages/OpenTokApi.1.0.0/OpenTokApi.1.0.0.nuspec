@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OpenTokApi</id>
+    <version>1.0.0</version>
+    <title>OpenTok Api</title>
+    <authors>khalidabuhakmeh</authors>
+    <owners>khalidabuhakmeh</owners>
+    <projectUrl>https://github.com/khalidabuhakmeh/OpenTokApi</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>OpenTok allows you to create live video experiences with the world's most dynamic API. Check it out at www.tokbox.com.</description>
+    <summary>OpenTok allows you to create live video experiences with the world's most dynamic API. Check it out at www.tokbox.com.</summary>
+    <tags>Video Chat API</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

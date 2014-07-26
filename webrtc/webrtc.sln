@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opentokRTC", "openTok\opentokRTC\opentokRTC.csproj", "{067BEEC6-ABDB-4AB3-A22C-FE8FEC3D98BC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HelloWorld", "http://localhost:1791", "{DB1A158F-7EDC-458A-9B00-CCCA614F86AA}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1791"
+		Debug.AspNetCompiler.PhysicalPath = "HelloWorld\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1791\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1791"
+		Release.AspNetCompiler.PhysicalPath = "HelloWorld\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1791\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "HelloWorld\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "one2onecall", "http://localhost:1805", "{6EA1D1D5-CF55-43D5-A335-9A398D3CFB9C}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1805"
+		Debug.AspNetCompiler.PhysicalPath = "one2onecall\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1805\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1805"
+		Release.AspNetCompiler.PhysicalPath = "one2onecall\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1805\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "one2onecall\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{067BEEC6-ABDB-4AB3-A22C-FE8FEC3D98BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067BEEC6-ABDB-4AB3-A22C-FE8FEC3D98BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067BEEC6-ABDB-4AB3-A22C-FE8FEC3D98BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067BEEC6-ABDB-4AB3-A22C-FE8FEC3D98BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1A158F-7EDC-458A-9B00-CCCA614F86AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1A158F-7EDC-458A-9B00-CCCA614F86AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1A158F-7EDC-458A-9B00-CCCA614F86AA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1A158F-7EDC-458A-9B00-CCCA614F86AA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6EA1D1D5-CF55-43D5-A335-9A398D3CFB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA1D1D5-CF55-43D5-A335-9A398D3CFB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA1D1D5-CF55-43D5-A335-9A398D3CFB9C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA1D1D5-CF55-43D5-A335-9A398D3CFB9C}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
