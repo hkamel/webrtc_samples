@@ -6,11 +6,11 @@
 		<link href="http://www.tokbox.com/opentok/assets/css/demos.css" type="text/css" rel="stylesheet" >
 		<script type="text/javascript" charset="utf-8">
             OT.on("exception", exceptionHandler);
-            var session = OT.initSession("2_MX40NDkwNjU2Mn5-U3VuIEp1bCAyMCAwNzoxNjoxOCBQRFQgMjAxNH4wLjI2MzYzOTAzfn4"); // Replace with your own session ID. See https://dashboard.tokbox.com/projects
+            var session = OT.initSession(""); // Replace with your own session ID. See https://dashboard.tokbox.com/projects
 			session.on('sessionConnected', sessionConnectedHandler);
 			session.on('streamCreated', streamCreatedHandler);
 			 
-			session.connect("44906562", "T1==cGFydG5lcl9pZD00NDkwNjU2MiZzaWc9ZGNkMTA4NGMyMjUxM2Y4NzY3ZmE0ZmRmYjdjYzA1MjFmOWYyYjU1Yjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5Ea3dOalUyTW41LVUzVnVJRXAxYkNBeU1DQXdOem94TmpveE9DQlFSRlFnTWpBeE5INHdMakkyTXpZek9UQXpmbjQmY3JlYXRlX3RpbWU9MTQwNTg2NTkxOSZub25jZT0wLjY5Mjk1OTQ3MjEwNzIwNzQmZXhwaXJlX3RpbWU9MTQwODQ1NzYzNg==");
+			session.connect("", "");
 			                                         // and https://dashboard.tokbox.com/projects
 
 			function sessionConnectedHandler(event) {
