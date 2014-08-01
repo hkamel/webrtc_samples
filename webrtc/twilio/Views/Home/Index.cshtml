@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Send SMS/Call Using Twilio</h2>
+
+
+<br />
+
+@{using (Html.BeginForm("Index","Home", FormMethod.Post))  {
+      
+<text>To Number : </text><input type="text" id="toPhoneNumber"  name="toPhoneNumber"/><br /> 
+
+<text>Message : </text><input type="text" id="messsage" name="messsage"/><br /> 
+<br/> 
+
+    <div style="color:red" >@ViewBag.ErrorMessage</div>
+<br /> 
+    <input type="submit" value="SMS" name="Command"/>
+    <input type="submit" value="Call" name="Command"/>
+     }
+
+     }
+
+ 
