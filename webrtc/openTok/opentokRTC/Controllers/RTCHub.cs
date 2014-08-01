@@ -52,17 +52,7 @@ namespace opentokRTC.Controllers
             Clients.Client(CallerConnectionId).notifyCallrejected("Call rejected by : " + self.Name);
         }
 
-        public void CallAcceptedSignal(string CallerConnectionId)
-        {
-            
-             
-
-
-            var caller = Users[CallerConnectionId];
-            var self = Users[Context.ConnectionId];
-             Clients.Client(CallerConnectionId).notifyCallaccepted(caller, self);
-            
-        }
+       
 
         public void EndCall(string CallerConnectionId)
         {
