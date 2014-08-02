@@ -59,6 +59,6 @@ D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\bin\System.Web.Razor.xml
 D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\bin\System.Web.WebPages.xml
 D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\bin\System.Web.WebPages.Razor.xml
-D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\obj\Debug\twilio.csprojResolveAssemblyReference.cache
 D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\obj\Debug\twilio.dll
 D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\obj\Debug\twilio.pdb
+D:\Projects\WebRTC\webrtc_samples\webrtc\twilio\obj\Debug\twilio.csprojResolveAssemblyReference.cache
